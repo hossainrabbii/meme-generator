@@ -1,0 +1,171 @@
+.btv-container {
+  width: 600px;
+  height: 600px;
+  margin: 0 auto;
+  position: relative;
+  animation: fadeInUp 1s ease-out 1.2s both;
+}
+
+.btv-container img {
+  width: 100%;
+  height: 100%;
+}
+.btv-screen,
+.bpower-control,
+.bpause-control,
+.bvolume-control,
+.bchannel-up-control,
+.bchannel-down-control {
+  position: absolute;
+}
+.bpower-control,
+.bpause-control,
+.bvolume-control {
+  bottom: 146px;
+}
+.bpower-control {
+  left: 177px;
+}
+.bpause-control {
+  left: 269px;
+}
+
+.bvolume-control {
+  right: 180px;
+}
+
+.bchannel-up-control {
+  top: 140px;
+  right: 40px;
+}
+.bchannel-down-control {
+  top: 220px;
+  right: 40px;
+}
+
+.btv-screen {
+  top: 74px;
+  width: 366px;
+  height: 275px;
+  left: 55px;
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: -1;
+}
+.bchannel-up-button,
+.bchannel-down-button,
+.bpower-button,
+.bpause-button,
+.bvolume-button {
+  width: 60px;
+  height: 25px;
+  background: linear-gradient(145deg, #d4c4a0, #b8a882);
+  border: 2px solid #a89878;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.3),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 600;
+  font-size: 0.6rem;
+  color: #4a4030;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
+}
+
+.bchannel-up-button,
+.bchannel-down-button {
+  width: 100px;
+  height: 60px;
+}
+.bpower-button:hover,
+.bpause-button:hover,
+.bvolume-button:hover,
+.bchannel-up-button:hover,
+.bchannel-down-button:hover {
+  transform: translateY(-1px);
+  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.4),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.3), 0 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.bpower-button:active,
+.bpause-button:active,
+.bvolume-button:active,
+.bchannel-up-button:active,
+.bchannel-down-button:active {
+  transform: translateY(1px) scale(0.95);
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.4),
+    inset 0 -1px 2px rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(145deg, #b8a882, #a89878);
+  border-color: #8a7a5a;
+  color: #2a2520;
+}
+
+@media screen and (max-width: 768px) {
+  .btv-container {
+    width: 320px;
+    height: 320px;
+  }
+  .bchannel-up-button,
+  .bchannel-down-button,
+  .bpower-button,
+  .bpause-button,
+  .bvolume-button {
+    width: 20px;
+    height: 12px;
+  }
+  .bchannel-up-button,
+  .bchannel-down-button {
+    width: 40px;
+    height: 30px;
+  }
+
+  .btv-screen {
+    top: 30px;
+    width: 195px;
+    height: 155px;
+    left: 29px;
+    border-radius: 10px;
+  }
+
+  .bpower-control,
+  .bpause-control,
+  .bvolume-control {
+    bottom: 73.3px;
+  }
+  .bpower-control {
+    left: 89px;
+  }
+  .bpause-control {
+    left: 138px;
+  }
+
+  .bvolume-control {
+    right: 90px;
+  }
+
+  .bchannel-up-control {
+    top: 70px;
+    right: 26px;
+  }
+  .bchannel-down-control {
+    top: 115px;
+    right: 26px;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
